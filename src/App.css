@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.button {
+  background-color: rgb(65, 74, 151);
+  border: none;
+  padding: 10px 24px;
+  min-width: 280px;
+  min-height: 100px;
+  border-radius: 5px;
+  font-size: 38px;
+  position: relative;
+  box-shadow: 0 5px 12px 1px rgb(19, 22, 51);
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.button:hover {
+  background-color: rgb(56, 64, 136);
+  cursor: pointer;
+  box-shadow: 0 10px 15px 5px rgb(19, 22, 51);
+}
+
+.buttonAnimation {
+  background-color: #36395a;
+  border: none;
+  padding: 10px 24px;
+  min-width: 125px;
+  min-height: 250px;
+  border-radius: 30px;
+  font-size: 38px;
+  position: relative;
+  box-shadow: 0 5px 12px 1px rgba(19, 22, 51, 0.295);
+  transition: 0.5s;
+  animation: brillar 0.6s infinite;
+}
+
+@keyframes brillar {
+  0% {
+    box-shadow: 0 5px 20px 4px #814d4d4b;
+  }
+
+  50% {
+    box-shadow: 0 5px 20px 4px #814d4db0;
+  }
+
+  100% {
+    box-shadow: 0 5px 20px 4px #814d4d4b;
+  }
+}
+
+
+
+p {
+  margin: 0;
+  padding-left: 60px;
+  transition: 0.5s;
+}
+
+.pAnimado {
+  animation: desaparecer 0.2s ease forwards;
+  padding: 0;
+  font-size: 1px;
+}
+
+@keyframes desaparecer {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.trash-icon {
+  width: 40px;
+  height: 50px;
+  position: absolute;
+  top: 23px;
+  transition: 0.3s;
+  z-index: 5;
+  transform: scale(0.7);
+}
+
+.trashAnimation {
+  animation: desplazarCentro 0.6s ease forwards;
+}
+
+@keyframes desplazarCentro {
+  0% {
+    transform: translateX(0) scale(0.7);
+  }
+
+  100% {
+    transform: translateX(20px) translateY(70px) scale(1);
+  }
+}
+
+.semicircle {
+  position: absolute;
+  top: -9px;
+  left: 9px;
+  width: 15px;
+  height: 6px;
+  border: 2.5px solid white;
+  border-bottom: none;
+  border-radius: 7px 7px 0 0;
+  background-color: transparent;
+}
+
+.lid {
+  width: 40px;
+  height: 0px;
+  border: 1.5px solid white;
+  position: absolute;
+  top: 7px;
+  left: 0px;
+  border-radius: 5px 5px 0 0;
+  box-sizing: border-box;
+}
+
+.lidAbrir {
+  animation: abrir 0.5s ease forwards;
+}
+
+@keyframes abrir {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(90deg) translate(5px, -25px);
+  }
+}
+
+.bin {
+  width: 30px;
+  height: 40px;
+  border: 2.5px solid white;
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  transition: 0.5s;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.binAnimation {
+  background-color: #36395a;
+}
+
+.line {
+  width: 0%;
+  height: 20px;
+  border-left: 2.5px solid white;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.Line2 {
+  animation: desaparecer 0.2s ease forwards;
+}
+
+.Inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 4px;
+  gap: 5px;
+  box-sizing: border-box;
+
+  background-color: royalblue;
+  width: 30px;
+  height: 35px;
+  border-radius: 2px;
+  position: absolute;
+  top: 40px;
+  left: 49px;
+  animation: entrar 1.5s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes entrar {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+
+  100% {
+    transform: translateY(60px) scale(0.8);
+  }
+}
+
+.lineInicio {
+  width: 18px;
+  height: 0px;
+  border-top: 2px solid white;
+}
+
+.lineInicio1 {
+  width: 13px;
+  height: 0px;
+  border-top: 2px solid white;
+}
+
+
+.desarrollo {
+  display: none;
+}
+
+.desarrolloAnimation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 26px;
+  height: 39px;
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  animation: desarrollo 1.5s ease forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes desarrollo {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+
+  100% {
+    transform: translateY(70px) scale(0.8);
+  }
+}
+
+.DesarrolloAnimation {
+  height: 35px;
+  width: 4px;
+  background-color: royalblue;
+}
+
+.circleFinal {
+  display: none;
+  width: 1px;
+  height: 1px;
+  border-radius: 100%;
+  background-color: royalblue;
+  position: absolute;
+  top: 130px;
+  left: 61px;
+  z-index: 3;
+  animation: final 1s ease forwards;
+  animation-delay: 2.3s;
+}
+
+.circleAnimation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes final {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    width: 1px;
+    height: 1px;
+  }
+
+  100% {
+    transform: translateY(30px) translateX(-8px);
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.paloma1 {
+  background-color: white;
+  height: 0px;
+  width: 2px;
+  position: absolute;
+  top: 11px;
+  left: 7px;
+  rotate: 310deg;
+  animation: paloma1 0.2s ease forwards;
+  animation-delay: 2.9s;
+}
+
+.paloma2 {
+  background-color: white;
+  height: 0px;
+  width: 2px;
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  rotate: 220deg;
+  transform-origin: top left;
+  animation: paloma2 0.5s ease forwards;
+  animation-delay: 3.1s;
+}
+
+@keyframes paloma1 {
+  0% {
+    height: 0px;
+  }
+
+  100% {
+    height: 5px;
+  }
+}
+
+@keyframes paloma2 {
+  0% {
+    height: 0px;
+  }
+
+  100% {
+    height: 12px;
+  }
+}
+
+.credits{
+  color: #383838;
+  text-shadow: 0 0 15px #383838;
+  font-size: 25px;
+  padding: 0;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+}
+
+.imagen{
+  width: 100px;
+}
+
+.divCreditos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  transition: 0.1s;
+}
+
+.divCreditos:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.divCreditos:hover .credits{
+  color: #414a97;
+  text-shadow: 0 0 15px #414a97;
+}
+
+.buttonFinal {
+  box-shadow: 0 0px 20px 4px #69bb6950 !important;
+  background-color: #414a97;
+  border: none;
+  padding: 10px 24px;
+  min-width: 280px;
+  min-height: 100px;
+  border-radius: 5px;
+  font-size: 38px;
+  position: relative;
+  transition: 0.7s;
+  z-index: 1;
+}
+
+.trashAnimationFinished{
+  width: 40px !important;
+  height: 50px !important;
+  position: absolute !important;
+  top: 23px !important;
+  transition: 0.3s !important;
+  z-index: 5 !important;
+  transform: scale(0.7) !important;
+  transition: 0.5s !important;
+}
+
+.binAnimationFinished{
+  background-color: #414a97 !important;
+  transition: 0.5s !important;
+}
+
+.inicioFinal{
+  display: none;
+}
+
+.circleAnimationFinished{
+  top: 21px !important;
+  left: 38.5px !important;
+  z-index: 10 !important;
+  scale: 0.6 !important;
+  background-color: rgb(50, 112, 53);
+  transition: 0.5s !important;
+}
+
+.lidFinished{
+  rotate: -90deg !important;
+  top: 32px !important;
+  left: -5px !important;
+  transition: 1s !important;
+}
+
+.eliminadoText{
+  font-size: 30px;
+  padding-left: 25px;
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: aparecerText 1s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes aparecerText{
+  0%{
+    opacity: 0;
+    width: 100px;
+  }
+  20%{
+    opacity: 1;
+  }
+
+  100%{
+    width: 200px;
+  }
+}
